@@ -9,7 +9,7 @@
     <groupId>org.igniterealtime.openfire.plugins</groupId>
     <artifactId>certificatemanager</artifactId>
     <name>Certificate Manager Plugin</name>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
 
     <build>
         <sourceDirectory>src/java</sourceDirectory>
