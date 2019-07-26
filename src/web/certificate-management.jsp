@@ -69,7 +69,8 @@
             path = DirectoryWatcher.PROPERTY_WATCHED_PATH_DEFAULT;
         }
 
-        String passphrase = ParamUtils.getStringParameter( request, "passphrase", null );
+        final String value = request.getParameter( "passphrase" );
+        String passphrase = ( value == null || value.isEmpty() ? null : value );
         if ( passphrase != null && !passphrase.isEmpty() )
         {
             passphrase = URLDecoder.decode( passphrase, "UTF-8" );

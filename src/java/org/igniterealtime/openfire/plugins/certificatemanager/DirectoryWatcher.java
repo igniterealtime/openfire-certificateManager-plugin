@@ -16,6 +16,7 @@
 package org.igniterealtime.openfire.plugins.certificatemanager;
 
 import org.jivesoftware.openfire.XMPPServer;
+import org.jivesoftware.openfire.keystore.CertificateStore;
 import org.jivesoftware.openfire.keystore.CertificateStoreManager;
 import org.jivesoftware.openfire.keystore.IdentityStore;
 import org.jivesoftware.openfire.security.SecurityAuditManager;
@@ -31,7 +32,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.*;
 import java.security.cert.X509Certificate;
-import java.util.Collection;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -177,11 +178,6 @@ public class DirectoryWatcher
 
                             try
                             {
-                                // OF-1608: Before applying changes, create a backup.
-                                final CertificateStoreManager certificateStoreManager = XMPPServer.getInstance().getCertificateStoreManager();
-                                final Collection<Path> backupPaths = certificateStoreManager.backup();
-                                SecurityAuditManager.getInstance().logEvent( "Certificate Manager plugin", "Created backup of key store files.", String.join( System.lineSeparator(), backupPaths.stream().map( Path::toString ).collect( Collectors.toList() ) ) );
-
                                 final String certsChain = new String( Files.readAllBytes( lastChangedCertificateChain ) );
                                 final String privateKey = new String( Files.readAllBytes( lastChangedPrivateKey ) );
 

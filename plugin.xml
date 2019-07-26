@@ -6,7 +6,7 @@
     <author>Guus der Kinderen</author>
     <version>${project.version}</version>
     <date>09/20/2018</date>
-    <minServerVersion>4.3.0 alpha</minServerVersion>
+    <minServerVersion>4.2.3</minServerVersion>
     <minJavaVersion>1.8</minJavaVersion>
     <adminconsole>
         <tab id="tab-server">
