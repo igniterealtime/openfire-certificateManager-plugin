@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Ignite Realtime Foundation. All rights reserved.
+ * Copyright (C) 2017-2024 Ignite Realtime Foundation. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ public class DirectoryWatcher
     private static final Logger Log = LoggerFactory.getLogger( DirectoryWatcher.class );
 
     public static final String PROPERTY_WATCHED_PATH = "certificate-manager.directory-watcher.watched-path";
-    public static final String PROPERTY_WATCHED_PATH_DEFAULT = JiveGlobals.getHomeDirectory() + File.separator + "resources" + File.separator + "security" + File.separator + "hotdeploy" + File.separator;
+    public static final String PROPERTY_WATCHED_PATH_DEFAULT = JiveGlobals.getHomePath().resolve("resources" + File.separator + "security" + File.separator + "hotdeploy" + File.separator).toString();
     public static final String PROPERTY_ENABLED = "certificate-manager.directory-watcher.enabled";
     public static final boolean PROPERTY_ENABLED_DEFAULT = true;
     public static final String PROPERTY_REPLACE = "certificate-manager.directory-watcher.replace";
