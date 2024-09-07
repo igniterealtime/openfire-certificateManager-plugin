@@ -5,9 +5,8 @@
     <description>Adds certificate management features.</description>
     <author>Guus der Kinderen</author>
     <version>${project.version}</version>
-    <date>2023-07-20</date>
-    <minServerVersion>4.3.0 alpha</minServerVersion>
-    <minJavaVersion>1.8</minJavaVersion>
+    <date>2024-09-06</date>
+    <minServerVersion>4.8.0</minServerVersion>
     <adminconsole>
         <tab id="tab-server">
             <sidebar id="sidebar-certificates">
