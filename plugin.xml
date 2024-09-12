@@ -5,7 +5,7 @@
     <description>Adds certificate management features.</description>
     <author>Guus der Kinderen</author>
     <version>${project.version}</version>
-    <date>2024-09-06</date>
+    <date>2024-09-12</date>
     <minServerVersion>4.8.0</minServerVersion>
     <adminconsole>
         <tab id="tab-server">
